@@ -1,4 +1,4 @@
-package main
+package board
 
 import "fmt"
 
@@ -30,7 +30,7 @@ type Cell struct {
 	activePiece piece
 }
 
-func initBoard() [8][8]Cell {
+func InitBoard() [8][8]Cell {
 	boardCells := [8][8]Cell{}
 
 	for file := 0; file < 8; file++ {
@@ -78,7 +78,7 @@ func initBoard() [8][8]Cell {
 	return boardCells
 }
 
-func printBoard(boardCells [8][8]Cell) {
+func PrintBoard(boardCells [8][8]Cell) {
 	for file := 0; file < 8; file++ {
 		for rank := 0; rank < 8; rank++ {
 			fmt.Printf(boardCells[file][rank].activePiece.ToString() + "\t")
